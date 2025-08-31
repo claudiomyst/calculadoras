@@ -1117,8 +1117,9 @@ ul.sf-menu li a {
     padding: 5px 15px;
     box-shadow: #ffffff1f 0px 1px 0px 0px, #00000024 1px 1px 5px 0px inset;
 }
-ul.sf-menu li.current-page a{
-    background-color: #FFF;
+ul.sf-menu li.current-page a {
+    background-color: #ed5565;
+    color: #f7c5c5;
 }
 
 .card:hover a#fechamento-mes,
