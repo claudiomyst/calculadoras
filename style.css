@@ -179,7 +179,7 @@ ul li{
 /*******************************
  * Header
  ******************************/
-#header-page{
+#header-page {
     height: 80px;
     background: #22242e;
     display: flex;
@@ -190,6 +190,8 @@ ul li{
     left: 0;
     width: 100%;
     z-index: 9999;
+    box-shadow: #353637 0px 1px 0px 0px;
+    border-bottom: #000 solid 1px;
 }
 body.admin-bar #header-page{
     top: 32px;
@@ -1103,23 +1105,55 @@ ul.sf-menu {
 }
 ul.sf-menu li {
     line-height: 30px;
-    padding: 0 15px;
-    margin: 7px 0;
+    padding: 0;
+    margin: 0;
 }
 ul.sf-menu li a {
     color: #FFF;
     font-size: 13px;
-    line-height: 30px;
+    line-height: 42px;
     font-weight: 600;
-    background-color: #1c1d26;
+    border-bottom: #0e122b solid 1px;
     display: block;
-    border-radius: 6px;
     padding: 5px 15px;
-    box-shadow: #ffffff1f 0px 1px 0px 0px, #00000024 1px 1px 5px 0px inset;
+    box-shadow: #ffffff12 0px 1px 0px 0px;
+    position: relative;
+    transition: all .4s ease-in-out;
+    text-transform: uppercase;
 }
-ul.sf-menu li.current-page a {
+ul.sf-menu li a:after,
+ul.sf-menu li a:before {
+    content: "";
+    width: 0px;
+    height: 100%;
+    display: block;
     background-color: #ed5565;
-    color: #f7c5c5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+}
+ul.sf-menu li a:before{
+    transition-delay: .3s;
+    transition-duration: .2s;
+}
+ul.sf-menu li a:after{
+    width: 0px;
+    left: auto;
+    right: 0;
+    background-color: #181921;
+    z-index: -2;
+}
+/** Hover **/
+ul.sf-menu li:hover a {
+    padding-left: 20px;
+}
+ul.sf-menu li:hover a:before{
+    width: 5px;
+}
+ul.sf-menu li:hover a:after{
+    width: 100%;
 }
 
 .card:hover a#fechamento-mes,
