@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GT3 Classroom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css?ver=2.3.1" media="all">
+    <link rel="stylesheet" href="style.css?ver=1.0" media="all">
+
+</head>
+
+<header id="header-page">
+    <div class="header-inner">
+        <div class="toggle-menu">
+            <button id="btn-toggle-menu"><span></span><span></span><span></span></button>
+        </div>
+        <div class="header-title"><h1><?php echo SITE_NAME; ?></h1></div>
+    </div>
+</header>
+
+<main class="main">
+
+    <div class="main-inner">
+
+        <div id="planejamento-grid" class="card-form">
+            <header class="card-full title-section">
+                <div class="header-inner">
+                    <h2>Operação estruturada</h2>
+                </div>
+                <div class="color-cinza font-1">Antes de iniciar sua operação, planeje cuidadosamente sua <span class="color-branco">"entrada"</span> e suas defesas.</div>
+            </header>
+            <div class="box-cards">
+        
+                <div class="card-full">
+                    <form id="grid-planejado-forn" action="" method="post">
+
+                    <div class="grid-row">
+                        <div class="card-full">
+                            <fieldset>
+                                <legend>Entrada da operação</legend>
+                            
+                                <div class="grid-row columns-4">
+                                    <div class="grid-col">
+                                        <div class="box-input">
+                                            <div class="input_container">
+                                                <label for="entrada">Preço de entrada <span class="req">*</span></label>
+                                                <input type="text" name="entrada" id="entrada" value="" class="only-numbers" placeholder="Insira o preço">
+                                                <span class="prefix">USDT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-col">
+                                        <div class="box-input">
+                                            <div class="input_container">
+                                                <label for="contratos">Qtd de contratos <span class="req">*</span></label>
+                                                <input type="text" name="contratos" id="contratos" value="" class="only-numbers numeric-field" placeholder="Insira a quantidade">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-col">
+                                        <div class="box-input">
+                                            <div class="input_container">
+                                                <label for="alavancagem">Alavancagem <span class="req">*</span></label>
+                                                <input type="text" name="alavancagem" id="alavancagem" value="10" class="only-numbers numeric-field" placeholder="Insira a alavancagem">
+                                                <span class="prefix"><img src="assets/images/x-alavancagem.svg" width="16" height="16"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-col">
+                                        <div class="box-input">
+                                            <div class="input_container">
+                                                <label for="taxa">Taxa <span class="req">*</span> <span class="icon-help right" data-tooltip="Ajuste a taxa aplicada para refletir as condições da sua corretora e seu nível de usuário. Isso permite cálculos mais precisos em relação aos valores reais das suas operações."></span></label>
+                                                <input type="text" name="taxa" id="taxa" value="" class="only-numbers numeric-field" placeholder="0.002">
+                                                <span class="prefix"><img src="assets/images/percentage.svg" width="14" height="14"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+        
+                    </form>
+                </div>
+        
+            </div>
+        </div><!-- #planejamento-grid-popup -->
+
+        <div id="grid-resultado">
+            
+            <fieldset class="defesas entrada">
+                <legend>Entrada da operação</legend>
+                
+                <div class="defesas-inner columns-6">
+                    <div class="col col-entrada">
+                        <div class="box-input">
+                            <div class="input_container">
+                                <label><span data-tooltip="O preço no qual você abriu sua posição">Entrada:</span></label>
+                                <span><span class="grid_entrada">--</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-valor">
+                        <div class="box-input">
+                            <div class="input_container">
+                                <label><span data-tooltip="Valor nocional da posição atual">Valor:</span></label>
+                                <span><span class="grid_valor">--</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-margem">
+                        <div class="box-input">
+                            <div class="input_container">
+                                <label><span data-tooltip="A quantidade aproximado de margem da sua operação">Margem:</span></label>
+                                <span><span class="margem">--</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-contratos">
+                        <div class="box-input">
+                            <div class="input_container">
+                                <label><span data-tooltip="A quantidade de contratos em que você abriu sua posição">Contratos:</span></label>
+                                <span><span class="contratos">--</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-defesa">
+                        <div class="box-input">
+                            <div class="input_container">
+                                <label><span data-tooltip="Valor do ativo onde sua defesa deve ser realizada">Defender em:</span></label>
+                                <span><span class="prox_defesa">--</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </fieldset>
+
+
+        </div>
+
+        <div id="info-recomenda">
+        </div>
+
+        <div class="grid-planejado-action">
+            <button type="button" id="add-defesa">
+                <span class="btn-icon"><img src="assets/images/add.svg" width="19" height="19"></span>
+                <span>Adicionar defesa</span>
+            </button>
+        </div>
+
+    </div>
+    
+</main>
+
+<aside id="main-menu">
+    <nav id="menu_sidebar">
+        <ul class="sf-menu">
+            <li class="menu-item"><a href="/">Página inicial</a></li>
+            <li class="menu-item current-page"><a href="#">Grid Planejado</a></li>
+        </ul>
+    </nav>
+</aside>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popups.js?ver=1.0"></script>
+    <script src="assets/js/ion.rangeSlider.min.js?ver=2.3.1"></script>
+    <script src="assets/js/script.js?ver=1.0"></script>
+
+</body>
+</html>

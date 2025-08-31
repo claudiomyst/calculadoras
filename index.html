@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trader Calculadoras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css?ver=2.3.1" media="all">
+    <link rel="stylesheet" href="style.css?ver=1.0" media="all">
+
+</head>
+
+<header id="header-page">
+    <div class="header-inner">
+        <div class="toggle-menu">
+            <button id="btn-toggle-menu"><span></span><span></span><span></span></button>
+        </div>
+        <div class="header-title"><h1 class="page-title">Trader Calculadoras</h1></div>
+    </div>
+</header>
+<main class="main">
+
+    <section class="cards">
+        <div class="card" data-cat="grid"><!-- calculadora-grid -->
+            <a id="calculadora-grid" class="open-popup" data-id="calculadora-grid" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/grid-defesa.svg" width="32" height="38"></span>
+                    <span class="cat">Grid</span>
+                </div>
+                <header>
+                    <h3 class="title">Defesa do Grid</h3>
+                </header>
+                <div class="card-description">Calcule onde ficará seu novo preço de entrada ao defender sua posição</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="grid"><!-- grid-invertido -->
+            <a id="grid-invertido" class="open-popup" data-id="grid-invertido" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/grid-invertido.svg" width="32" height="38"></span>
+                    <span class="cat">Grid</span>
+                </div>
+                <header>
+                    <h3 class="title">Piramidagem</h3>
+                </header>
+                <div class="card-description">Determine onde sua entrada vai ficar ao aumentar contratos em sua posição</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="grid"><!-- planejamento-grid -->
+            <a id="planejamento-grid" class="no-popup" href="grid-planejado.html">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/operacao-estruturada.svg" width="32" height="38"></span>
+                    <span class="cat">Grid</span>
+                </div>
+                <header>
+                    <h3 class="title">Operação estruturada</h3>
+                </header>
+                <div class="card-description">Planeje sua entrada e defesas antes de iniciar a sua operação</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="scalp"><!-- alavancagem -->
+            <a id="alavancagem" class="open-popup" data-id="alavancagem" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/alavancagem.svg" width="32" height="38"></span>
+                    <span class="cat">Scalp</span>
+                </div>
+                <header>
+                    <h3 class="title">Alavancagem dinâmica</h3>
+                </header>
+                <div class="card-description">Use a alavancagem correta para limitar seus stops</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="hedge"><!-- ponto-equilibrio -->
+            <a id="ponto-equilibrio" class="open-popup" data-id="ponto-equilibrio" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/hedge.svg" width="22" height="28"></span>
+                    <span class="cat">Hedge</span>
+                </div>
+                <header>
+                    <h3 class="title">Ponto de Equilíbrio no Hedge</h3>
+                </header>
+                <div class="card-description">Calcule e descubra em qual valor seu hedge ficará no 0x0</div>
+            </a>
+        </div>
+        
+        <div class="card" data-cat="grid">
+            <a id="fechamento-mes" class="no-popup" data-id="fechamento-mes" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/fechamento-mes.svg" width="32" height="38"></span>
+                    <span class="cat">Gestão</span>
+                </div>
+                <header>
+                    <h3 class="title">Fechamento do mês</h3>
+                </header>
+                <div class="card-description">Descubra quanto tem realmente em sua conta no fim do mês</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="grid">
+            <a id="preco-liquidacao" class="no-popup" data-id="preco-liquidacao" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/liquidacao.svg" width="32" height="38"></span>
+                    <span class="cat">Gestão</span>
+                </div>
+                <header>
+                    <h3 class="title">Preço de liquidação</h3>
+                </header>
+                <div class="card-description">Cálcule o preço de liquidação das suas operações</div>
+            </a>
+        </div>
+
+        <div class="card" data-cat="grid">
+            <a id="outros" class="no-popup" data-id="outros" href="#">
+                <div class="card-top">
+                    <span class="icon"><img src="assets/images/icones-cards/outros.svg" width="32" height="38"></span>
+                    <span class="cat">Diversos</span>
+                </div>
+                <header>
+                    <h3 class="title">Outros</h3>
+                </header>
+                <div class="card-description">Veja alguns cálculos básicos que facilitam o dia a dia</div>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<aside id="main-menu">
+    <nav id="menu_sidebar">
+        <ul class="sf-menu">
+            <li class="menu-item current-page"><a href="/">Página inicial</a></li>
+            <li class="menu-item"><a href="grid-planejado.html">Grid Planejado</a></li>
+        </ul>
+    </nav>
+</aside>
+
+
+    <!-- Popup -->
+    <div id="calculadora-grid-popup" class="popup" style="display: none;">
+        <header class="card-full title-section">
+            <div class="header-inner">
+                <h2>Novo preço de entrada</h2>
+                <a href="#" class="icon-close"></a>
+            </div>
+            <div class="text color-cinza font-1"><p>Calcule onde ficará seu preço de entrada ao adicionar mais contratos à sua operação.</p></div>
+        </header>
+        <div class="box-cards">
+            
+            <div class="card-full">
+                <form id="defesa-grid" action="" method="post">
+                    <div class="grid-row">
+    
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Preços</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="entrada-price">Preço de entrada <span class="req">*</span></label>
+                                        <input type="text" name="entrada-price" id="entrada-price" value="" class="only-numbers" placeholder="Inserir o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                    <div class="input_container">
+                                        <label for="preco-atual">Mark Price (Preço atual) <span class="req">*</span></label>
+                                        <input type="text" name="preco-atual" id="preco-atual" value="" class="only-numbers" placeholder="Inserir o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Contratos</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="entrada-contratos">Qtd de contratos da posição <span class="req">*</span></label>
+                                        <input type="text" name="entrada-contratos" id="entrada-contratos" value="" class="only-numbers" placeholder="Inserir a quantidade">
+                                    </div>
+                                    <div class="input_container">
+                                        <label for="defesa-contratos">Qtd de contratos adicionais <span class="req">*</span></label>
+                                        <input type="text" name="defesa-contratos" id="defesa-contratos" value="" class="only-numbers numeric-field" placeholder="Inserir a quantidade">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                    </div>
+                </form>
+    
+            </div><!-- card-full -->
+    
+            <div class="card-full">
+                <div class="card-result">
+                    <div class="text">
+                        <span class="item-title">Resultado:</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="text-lado-a-lado">
+                        <div class="options-item">
+                            <div class="item-label">Total de contratos:</div>
+                            <div class="item-content"><span id="contratos-total">--</span></div>
+                        </div>
+                        <div class="options-item">
+                            <div class="item-label">Distância do preço atual:</div>
+                            <div class="item-content"><span id="distancia-percentual">--</span></div>
+                        </div>
+                        <div class="options-item">
+                            <div class="item-label">Novo preço de entrada:</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="new-price-defesa text">--</div>
+                                    <button class="btn-copy-text" data-input="new-price-defesa"><span class="copied">Copiado</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="description">O resultado obtido é aproximado devido ao preço do ativo estar em constante movimento.</p>
+            </div>
+    
+            <footer class="card-full">
+                <button type="submit" form="defesa-grid">Calcular</button>
+            </footer>
+    
+        </div>
+    </div><!-- #calculadora-grid-popup -->
+
+    <div id="alavancagem-popup" class="popup" style="display: none;">
+        <header class="card-full title-section">
+            <div class="header-inner">
+                <h2>Calculo de alavancagem</h2>
+                <a href="#" class="icon-close"></a>
+            </div>
+            <div class="text color-cinza font-1">Calcule a alavancagem ideal para sua operação.</div>
+        </header>
+        <div class="box-cards">
+            
+            <div class="card-full">
+                <form id="alavancagem-forn" action="" method="post">
+                    <div class="grid-row">
+                        
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Preços</legend>
+                                
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="entrada">Preço de entrada <span class="req">*</span></label>
+                                        <input type="text" name="entrada" id="entrada" value="" class="only-numbers">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="stop_loss">Preço do Stop Loss <span class="req">*</span></label>
+                                        <input type="text" name="stop_loss" id="stop_loss" value="" class="only-numbers">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                        
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Margem e aceito de perda</legend>
+
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="margem">Margem inicial <span class="req">*</span></label>
+                                        <input type="text" name="margem" id="margem" value="" class="only-numbers">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <input type="text" class="input-range" name="aceito_perder" value="50">
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="card-full">
+                <div class="card-result">
+                    <div class="text">
+                        <span class="item-title">Resultado:</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="text-lado-a-lado">
+
+                        <div class="options-item">
+                            <div class="item-label">Alavancagem aproximada:</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="alavancagem-ideal">--</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="options-item">
+                            <div class="item-label">Perda ao atingir o stop loss:</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="loss_per_trade">--</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="options-item">
+                            <div class="item-label">(ROI) % do Stop Loss:</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="pct_stop_loss">--</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <p class="description">Os cálculos são apenas estimativas. Cada corretora possui suas próprias regras, taxas de cobrança e formatações para cada ativo, e por isso essas variáveis não são consideradas por esta calculadora.</p>
+            </div>
+
+        </div>
+    </div><!-- #alavancagem-popup -->
+
+    <div id="ponto-equilibrio-popup" class="popup" style="display: none;">
+        <header class="card-full title-section">
+            <div class="header-inner">
+                <h2>Ponto de equilíbrio no Hedge</h2>
+                <a href="#" class="icon-close"></a>
+            </div>
+            <div class="text color-cinza font-1">Calcule onde estará no 0x0 das suas operações de Hedge desequilibrado.</div>
+        </header>
+        <div class="box-cards">
+
+            <div class="card-full">
+                <form id="equilibrio-hedge" action="" method="post">
+
+                    <div class="grid-row">
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Preços</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="hedge_preco_entrada_long">Preço de entrada do Long <span class="req">*</span></label>
+                                        <input type="text" name="hedge_preco_entrada_long" id="hedge_preco_entrada_long" value="" class="only-numbers" placeholder="Insira o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="hedge_preco_entrada_short">Preço de entrada do Short <span class="req">*</span></label>
+                                        <input type="text" name="hedge_preco_entrada_short" id="hedge_preco_entrada_short" value="" class="only-numbers" placeholder="Insira o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Contratos</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="num_contratos_long">Qtd de contratos do Long <span class="req">*</span></label>
+                                        <input type="text" name="num_contratos_long" id="num_contratos_long" value="" class="only-numbers" placeholder="Insira a quantidade">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="num_contratos_short">Qtd de contratos do Short <span class="req">*</span></label>
+                                        <input type="text" name="num_contratos_short" id="num_contratos_short" value="" class="only-numbers" placeholder="Insira a quantidade">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="card-full">
+                <div class="card-result">
+                    <div class="text">
+                        <span class="item-title">Resultado:</span>
+                    </div>
+                    <div class="line"></div>
+                    
+                    <div class="text-result-erro"></div>
+
+                    <div class="text-lado-a-lado">
+                        <div class="options-item">
+                            <div class="item-label">Operação de Long (ROI):</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="porcentagem-long">--</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="options-item">
+                            <div class="item-label">Operação de Short (ROI):</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="porcentagem-short">--</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="options-item">
+                        <div class="item-label">Equilíbrio entre as operações:</div>
+                        <div class="item-content">
+                            <div class="box-copy">
+                                <div class="equilibrio text">--</div>
+                                <button class="btn-copy-text" data-input="equilibrio"><span class="copied">Copiado</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="description">As taxas não são levadas em consideração neste cálculo.</p>
+            </div>
+
+            <footer class="card-full">
+                <button type="submit" form="equilibrio-hedge">Calcular</button>
+            </footer>
+
+        </div>
+    </div><!-- #default-popup -->
+
+    <div id="grid-invertido-popup" class="popup" style="display: none;">
+        <header class="card-full title-section">
+            <div class="header-inner">
+                <h2>Piramidagem</h2>
+                <a href="#" class="icon-close"></a>
+            </div>
+            <div class="text color-cinza font-1"><p>Decida até onde seu preço de entrada pode chegar e, em seguida, calcule a quantidade de contratos que você precisa adicionar.</p></div>
+        </header>
+        <div class="box-cards">
+            
+            <div class="card-full">
+                <form id="piramidagem" action="" method="post">
+                    <div class="grid-row">
+    
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Preços</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="entrada-price">Preço de entrada <span class="req">*</span></label>
+                                        <input type="text" name="entrada-price" id="entrada-price" value="" class="only-numbers" placeholder="Inserir o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                    <div class="input_container">
+                                        <label for="preco-atual">Mark Price (Preço atual) <span class="req">*</span></label>
+                                        <input type="text" name="preco-atual" id="preco-atual" value="" class="only-numbers" placeholder="Inserir o preço">
+                                        <span class="prefix">USDT</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                        <div class="grid-col">
+                            <fieldset>
+                                <legend>Contratos</legend>
+                                <div class="box-input">
+                                    <div class="input_container">
+                                        <label for="entrada-contratos">Qtd de contratos da posição <span class="req">*</span></label>
+                                        <input type="text" name="entrada-contratos" id="entrada-contratos" value="" class="only-numbers numeric-field" placeholder="Inserir a quantidade">
+                                        <span class="prefix"><img src="assets/images/numeric-field.svg" width="16" height="16"></span>
+                                    </div>
+                                    <div class="input_container">
+                                        <label for="contratos-adicionais">Qtd de contratos adicionais <span class="req">*</span></label>
+                                        <input type="text" name="contratos-adicionais" id="contratos-adicionais" value="" class="only-numbers numeric-field" placeholder="Inserir a quantidade">
+                                        <span class="prefix"><img src="assets/images/numeric-field.svg" width="16" height="16"></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                    </div>
+                </form>
+    
+            </div><!-- card-full -->
+    
+            <div class="card-full">
+                <div class="card-result">
+                    <div class="text">
+                        <span class="item-title">Resultado:</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="text-result-erro"></div>
+
+                    <div class="text-lado-a-lado">
+                        <div class="options-item">
+                            <div class="item-label">Distância do preço atual:</div>
+                            <div class="item-content"><span id="distancia-percentual">--</span></div>
+                        </div>
+                        <div class="options-item">
+                            <div class="item-label">Novo preço de entrada:</div>
+                            <div class="item-content">
+                                <div class="box-copy">
+                                    <div class="nova-entrada text">--</div>
+                                    <button class="btn-copy-text" data-input="nova-entrada"><span class="copied">Copiado</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="description">O resultado obtido é aproximado devido ao preço do ativo estar em constante movimento.</p>
+            </div>
+    
+            <footer class="card-full">
+                <button type="submit" form="piramidagem">Calcular</button>
+            </footer>
+    
+        </div>
+    </div><!-- #calculadora-grid-popup -->
+
+
+    <div id="default-popup" class="popup" style="display: none;">
+        <header class="card-full title-section">
+            <div class="header-inner">
+                <h2>Grid Planejamento</h2>
+                <a href="#" class="icon-close"></a>
+            </div>
+            <div class="text color-cinza font-1">Antes de entrar em Grid planeje sua entrada e defesas.</div>
+        </header>
+        <div class="box-cards">
+
+            <div class="card-full">
+            </div>
+
+            <div class="card-full">
+            </div>
+
+            <footer class="card-full">
+            </footer>
+
+        </div>
+    </div><!-- #default-popup -->
+
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popups.min.js?ver=1.0"></script>
+    <script src="assets/js/ion.rangeSlider.min.js?ver=2.3.1"></script>
+    <script src="assets/js/script.min.js?ver=1.0"></script>
+
+</body>
+</html>
